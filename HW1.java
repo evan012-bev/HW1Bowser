@@ -1,6 +1,6 @@
 
 /*
- * *** PLACE YOUR NAME / SECTION  HERE ***
+ * *** Evan Boowser Section 002***
  *
  * Homework # 1 (Programming Assignment). This Java class defines some basic
  * manipulation operations on Linked-Lists and Stacks.
@@ -87,7 +87,19 @@ public class HW1 {
          */
         public void removeElementsLT ( int ltValue ) {
 
-            // YOUR CODE GOES HERE
+            Node new_node = new Node(0);
+            new_node.next = head;
+            Node current = dummy;
+
+            while(current.next != null) {
+                if (current.next.data < ltValue) {
+                    current.next - current.next.next;
+                } else {
+                    current = current.next'
+                }
+            }
+            head = new_node.next;
+        }
 
             return;
         }
@@ -100,7 +112,19 @@ public class HW1 {
 
         public void removeElement ( int value ) {
 
-            // YOUR CODE GOES HERE
+            Node new_node = new Node(0);
+            new_node.next = head;
+            Node current = new_node;
+
+            while (current.next != null) {
+                if (current.next.data == value) {
+                    current.next = current.next.next;
+                } else {
+                    current = current.next;
+                }
+            }
+            head = new_node.next;
+        }
 
             return;
         }
